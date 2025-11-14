@@ -12,7 +12,7 @@ int main() {
     int n;
     cin >> n;
 
-    vector<Node> tree(n + 1); // индексация с 1
+    vector<Node> tree(n + 1); 
 
     for (int i = 0; i < n - 1; i++) {
         int x, y, z;
@@ -21,8 +21,8 @@ int main() {
         else tree[x].right = y;
     }
 
-    // BFS от корня
-    queue<pair<int,int>> q; // (вершина, уровень)
+    
+    queue<pair<int,int>> q; 
     q.push({1, 1});
 
     unordered_map<int,int> levelCount;

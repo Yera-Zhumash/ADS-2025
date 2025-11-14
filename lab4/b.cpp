@@ -7,7 +7,7 @@ struct Node {
     Node(int v) : val(v), left(nullptr), right(nullptr) {}
 };
 
-// вставка в BST
+
 Node* insert(Node* root, int x) {
     if (!root) return new Node(x);
     if (x < root->val) root->left = insert(root->left, x);
@@ -15,7 +15,7 @@ Node* insert(Node* root, int x) {
     return root;
 }
 
-// поиск узла по значению
+
 Node* findNode(Node* root, int x) {
     if (!root) return nullptr;
     if (root->val == x) return root;
@@ -23,7 +23,7 @@ Node* findNode(Node* root, int x) {
     else return findNode(root->right, x);
 }
 
-// считаем размер поддерева
+
 int subtreeSize(Node* root) {
     if (!root) return 0;
     return 1 + subtreeSize(root->left) + subtreeSize(root->right);
